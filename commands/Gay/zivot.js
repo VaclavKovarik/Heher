@@ -3,15 +3,15 @@ const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 module.exports = {
-    name: "hajzl",
-    category: "VSZ",
+    name: "zivot",
+    category: "Gay",
     aliases: [""],
     cooldown: 1,
-    usage: "hajzl",
-    description: "O hajzly tu nikdo zájem nemá",
+    usage: "zivot",
+    description: "Billy",
     run: async (client, message, args, user, text, prefix) => {
     try{
-        message.channel.send("https://media.discordapp.net/attachments/424521546372218882/910833141013426196/unknown.png");
+        message.channel.send("https://c.tenor.com/BSnn_D2LLbsAAAAd/billy-herrington-billy-herrington-drinks-beer.gif");
     } catch (e) {
         console.log(String(e.stack).bgRed)
         return message.channel.send(new MessageEmbed()

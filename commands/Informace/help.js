@@ -3,7 +3,7 @@ const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 module.exports = {
     name: "help",
-    category: "Information",
+    category: "Informace",
     aliases: ["h", "commandinfo", "cmds", "cmd"],
     cooldown: 4,
     usage: "help [Command]",

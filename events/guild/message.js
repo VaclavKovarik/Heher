@@ -12,12 +12,40 @@ module.exports = async (client, message) => {
     console.log(message.content);
     //if the message is not in a guild (aka in dms), return aka ignore the inputs
     if (!message.guild) return;
+    if (message.channel.name == "hry-novinky" && message.author.bot)
+    {
+      let user = "<@274116569573883904>";
+      message.channel.send(`HALDE NOVINKA ${user}!`);
+      return;
+    }
     // if the message  author is a bot, return aka ignore the inputs
     if (message.author.bot) return;
-    //if the channel is on partial fetch it
-    if (message.channel.partial) await message.channel.fetch();
-    //if the message is on partial fetch it
-    if (message.partial) await message.fetch();
+      //if the channel is on partial fetch it
+      if (message.channel.partial) await message.channel.fetch();
+      //if the message is on partial fetch it
+      if (message.partial) await message.fetch();
+  
+    if (message.content.includes("not hehe"))
+    {
+      const name = "sadKEK";
+      const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === name);
+      message.react(reactionEmoji);
+      return;
+    }
+    else if (message.content.includes("hehe"))
+    {
+      const name = "kek";
+      const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === name);
+      message.react(reactionEmoji);
+      return;
+    }
+    if (message.content == "ok")
+    {
+      const name = "feelsokayman";
+      const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === name);
+      message.react(reactionEmoji);
+      return;
+    }
     //get the current prefix from the botconfig/config.json
     let prefix = config.prefix
     //the prefix can be a Mention of the Bot / The defined Prefix of the Bot
@@ -110,6 +138,7 @@ module.exports = async (client, message) => {
       .setDescription(`To get help on a specific command, type \`${prefix}help [command name]\``)
     ).then(msg=>msg.delete({timeout: 5000}).catch(e=>console.log("Couldn't Delete --> Ignore".gray)));
   }catch (e){
+    console.log(e);
     return message.channel.send(
     new MessageEmbed()
     .setColor("RED")

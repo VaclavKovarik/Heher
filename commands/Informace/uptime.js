@@ -1,26 +1,21 @@
 const { MessageEmbed } = require("discord.js");
 const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
+const { duration } = require("../../handlers/functions")
 module.exports = {
-    name: "ping",
-    category: "Information",
-    aliases: ["latency"],
-    cooldown: 2,
-    usage: "ping",
-    description: "Gives you information on how fast the Bot can respond to you",
+    name: "uptime",
+    category: "Informace",
+    aliases: [""],
+    cooldown: 10,
+    usage: "uptime",
+    description: "Returns the duration on how long the Bot is online",
     run: async (client, message, args, user, text, prefix) => {
     try{
       message.channel.send(new MessageEmbed()
         .setColor(ee.color)
         .setFooter(ee.footertext, ee.footericon)
-        .setTitle(`🏓 Pinging....`)
-      ).then(msg=>{
-        msg.edit(new MessageEmbed()
-          .setColor(ee.color)
-          .setFooter(ee.footertext, ee.footericon)
-          .setTitle(`🏓 Ping is \`${Math.round(client.ws.ping)}ms\``)
-        );
-      })
+        .setTitle(`:white_check_mark: **${client.user.username}** is since:\n ${duration(client.uptime)} online`)
+      );
     } catch (e) {
         console.log(String(e.stack).bgRed)
         return message.channel.send(new MessageEmbed()

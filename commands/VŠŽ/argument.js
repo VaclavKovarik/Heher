@@ -3,15 +3,15 @@ const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 module.exports = {
-    name: "hrot",
-    category: "VSZ",
+    name: "argument",
+    category: "VŠŽ",
     aliases: [""],
     cooldown: 1,
-    usage: "hrot",
-    description: "Agitace",
+    usage: "argument",
+    description: "Argumenty",
     run: async (client, message, args, user, text, prefix) => {
     try{
-        message.channel.send("https://media.discordapp.net/attachments/424521546372218882/815185171669843998/unknown.png");
+        message.channel.send("https://media.discordapp.net/attachments/424521546372218882/922597493747908618/unknown.png");
     } catch (e) {
         console.log(String(e.stack).bgRed)
         return message.channel.send(new MessageEmbed()

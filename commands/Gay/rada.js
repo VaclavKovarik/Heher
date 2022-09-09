@@ -3,15 +3,22 @@ const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 module.exports = {
-    name: "retard",
-    category: "VSZ",
+    name: "rada",
+    category: "Gay",
     aliases: [""],
     cooldown: 1,
-    usage: "retard",
-    description: "Dělej",
+    usage: "rada",
+    description: "Rádci",
     run: async (client, message, args, user, text, prefix) => {
     try{
-        message.channel.send("https://media.discordapp.net/attachments/731502645898117150/927895866877046825/unknown.png");
+        var textArray = [
+            'https://i.kym-cdn.com/photos/images/newsfeed/001/562/654/1fd.jpg',
+            'https://i.kym-cdn.com/photos/images/newsfeed/001/562/655/8fa.jpg',
+            'https://i.kym-cdn.com/photos/images/newsfeed/001/562/650/cd0.jpg',
+            'https://i.kym-cdn.com/photos/images/newsfeed/001/548/116/85d.jpg'
+        ];
+        var randomNumber = Math.floor(Math.random()*textArray.length);
+        message.channel.send(textArray[randomNumber]);
     } catch (e) {
         console.log(String(e.stack).bgRed)
         return message.channel.send(new MessageEmbed()

@@ -4,7 +4,7 @@ const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 module.exports = {
     name: "založeno",
-    category: "VSZ",
+    category: "Těstoviny",
     aliases: [""],
     cooldown: 1,
     usage: "založeno",

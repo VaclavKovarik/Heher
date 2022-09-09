@@ -3,15 +3,15 @@ const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 module.exports = {
-    name: "ninja",
-    category: "VSZ",
+    name: "hrot",
+    category: "VŠŽ",
     aliases: [""],
     cooldown: 1,
-    usage: "ninja",
-    description: "Noelle",
+    usage: "hrot",
+    description: "Agitace",
     run: async (client, message, args, user, text, prefix) => {
     try{
-        message.channel.send("https://media.discordapp.net/attachments/744600014562787399/917458594402799676/z6gyth7u1r381.png");
+        message.channel.send("https://media.discordapp.net/attachments/424521546372218882/815185171669843998/unknown.png");
     } catch (e) {
         console.log(String(e.stack).bgRed)
         return message.channel.send(new MessageEmbed()
