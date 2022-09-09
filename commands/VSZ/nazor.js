@@ -7,7 +7,7 @@ module.exports = {
     category: "VSZ",
     aliases: [""],
     cooldown: 1,
-    usage: "Názor",
+    usage: "názor",
     description: "Názory",
     run: async (client, message, args, user, text, prefix) => {
     try{
