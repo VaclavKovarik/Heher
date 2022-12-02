@@ -12,7 +12,7 @@ module.exports = async (client, message) => {
     console.log(message.content);
     //if the message is not in a guild (aka in dms), return aka ignore the inputs
     if (!message.guild) return;
-    if (message.channel.name == "hry-novinky" && message.author.bot)
+    if (message.channel.name == "hry-novinky" && !(message.author.id === client.user.id))
     {
       let user = "<@274116569573883904>";
       message.channel.send(`HALDE NOVINKA ${user}!`);
